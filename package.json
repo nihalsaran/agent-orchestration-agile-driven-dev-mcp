@@ -1,0 +1,25 @@
+{
+  "name": "codex-mcp-registry",
+  "version": "0.1.0",
+  "description": "MCP server exposing Codex CLI agents as tools over stdio",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-esm src/index.ts",
+    "smoke": "node scripts/smoke-test.mjs",
+    "verify:codex": "node scripts/verify-codex.mjs",
+    "test:tools": "node scripts/test-tools.mjs",
+    "use-case": "node scripts/run-use-case.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.2",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}
